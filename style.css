@@ -1,0 +1,44 @@
+<style type="text/css">
+  BODY { color: black; background: red; }
+  BODY { font-family: Verdana, Arial, Helvetica, sans-serif; }   
+  
+  H1, H2, H3, H4 {
+	  font-family: Verdana, sans-serif;
+	  color: navy;
+	  background: transparent;
+  }
+
+  H1, H2 { text-align: center; }
+  
+
+  H3 {
+	  text-align: left;
+	  margin-left: 2%;
+  }
+
+  H4 {
+	  text-align: left;
+	  margin-left: 3%;
+  }
+
+  UL, OL, DL, P {
+	  margin-left: 4%;
+	  margin-right: 4%;
+  }
+  
+  HR { color: silver; }
+
+  A:link {
+	    color: navy;
+	    background: transparent;
+    }
+    A:visited {
+	    background: transparent;
+	    color: maroon;
+    }
+  A:active {
+	  background: yellow;
+	  color: red;
+  }
+p.clear {clear: both}
+</style> 
