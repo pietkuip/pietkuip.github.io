@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<TITLE>Lab R&ouml;ntgenspektra och Bragg-diffraktion</TITLE>
+<link type="text/css" rel="stylesheet" href="../style.css"> 
+</HEAD>
+<BODY>
+
+<H1>R&ouml;ntgenspektra och Bragg-diffraktion</H1>
+
+<H4>F&ouml;rberedelse</H4>
+
+<UL>
+<LI>Fotonenergi &auml;r proportionell mot frekvens och omv&auml;nd proportionell mot 
+v&aring;gl&auml;ngd. Vi kan allts&aring; skriva E=k/&lambda; eller &lambda; = k/E. 
+H&auml;rled att konstanten k=12,4 [&Aring;.keV] om v&aring;gl&auml;ngden 
+ges i &Aring;ngstr&ouml;m och fotonenergi i keV.
+<LI>L&auml;s kapitel 12 av J&ouml;nsson. Besvara fr&aring;gorna l&auml;ngre ner.
+<LI>Om du tar med en egen b&auml;rbarPC med RS232-anslutning, skulle du kunna installera mjukvaran
+fr&aring;n <a href="http://www.ld-didactic.de/index.php?id=84&L=2">Leybolds sajt</a>.
+</UL>
+
+<H4>Uppst&auml;llning</H4>
+
+<P>Leybolds r&ouml;ntgenapparat &auml;r mikroprocessor-styrd. H&ouml;gsp&auml;nningen &auml;r bara p&aring; n&auml;r det beh&ouml;vs; s&aring; skyddas b&aring;da m&auml;nniskokroppen och GM-r&ouml;ret. En PC l&auml;ser in m&auml;tdata fr&aring;n r&ouml;ntgenapparaten, och plottar dem automatiskt med l&auml;mpliga axlar.</P>
+<P><CENTER><IMG SRC="x_ray_Leybold.jpg"></CENTER>
+</P>
+
+<P>Montera en litiumfluorid-kristall i h&aring;llaren om det &auml;r en molybden-anod; b&ouml;rja med natriumklorid vid Cu-anod.<BR>
+Tryck p&aring; <B>U</B> och vrid upp h&ouml;gsp&auml;nningen till 35 kV med knappen <B>ADJUST</B>.<BR>
+Tryck p&aring; <B>I</B> och vrid upp emissionsstr&ouml;mmen upp till 1,00 mA.<BR>
+Kolla att tiden &auml;r inst&auml;lld p&aring; 1 s genom att trycka p&aring; <B>&Delta;t</B>.<BR>
+Kolla att vinkelsteget &auml;r inst&auml;lld p&aring; 0,1&deg; per m&auml;tpunkt genom att trycka p&aring; <B>&Delta;&beta;</B>.<BR>
+Tryck p&aring; <B>COUPLED</B> f&ouml;r att f&aring; b&aring;da kristallen och detektorn att rotatera (i f&ouml;rh&aring;llande 1:2, s&aring;kallad &theta;-2&theta; mode). Tryck sedan p&aring; <B>&beta; limits</B> f&ouml;r att st&auml;lla in vinkeln d&auml;r m&auml;tningen ska b&ouml;rja (default 2,5&deg;) och en g&aring;ng till f&ouml;r var den ska sluta (default 30,0&deg;, men anv&auml;nd 50&deg; vid kopparanod). </P>
+
+<P>Starta programmet <I>X-Ray Apparatus</I> p&aring; PC:n. 
+Programmet k&auml;nner av om kopplingen till r&ouml;ntgenapparaten fungerar.<BR>
+Tryck nu p&aring; <B>SCAN</B> f&ouml;r att b&ouml;rja en m&auml;tning. Detektorn och kristallen r&ouml;r sig, 
+h&ouml;gsp&auml;nningen sl&aring;s p&aring; automatiskt, displayn visar att detektorn registerar r&ouml;ntgenfotoner 
+och datorn b&ouml;rjar rita upp en graf.<BR>
+N&auml;r m&auml;tningen &auml;r klar, kan man starta en ny scan. Datorn visar nu b&aring;da grafer, och reproducerbarheten ska vara god.</P> 
+
+<P>M&auml;t topparnas mittpunkter med hj&auml;p av mjukvaraverktyg under h&ouml;gerklick med datormusen.</P>
+
+<H4>Karakteristiska linjer fr&aring;n koppar</H4>
+
+<P>
+<TABLE>
+    <TR><TD><IMG SRC="CopperKRontgen.png"></TD>
+    <TD><P>F&ouml;rutom bromsstr&aring;lngskontinuum, finns det ocks&aring; linjer som 
+&auml;r karakteristiska f&ouml;r anodmaterialet. Om elektronernas kinetiska 
+energi &auml;r tillr&auml;ckligt stor (dvs om sp&auml;nningen &auml;r 
+tillr&auml;ckligt h&ouml;g), kan de sl&aring; ut elektroner fr&aring;n 
+anodatomernas K-skal. H&aring;let fylls upp av en elektron fr&aring;n en 
+energiniv&aring; med l&auml;gre bindningsenergi. Energiskillnaden kan ge 
+upphov till en foton.</P> 
+
+<P>Figuren bredvid visar niv&aring;-schema av
+<A HREF="http://www.webelements.com/webelements/elements/text/Cu/bind.html">
+koppar</A>. 
+Karakteristisk str&aring;lning fr&aring;n L&rarr;K &auml;r starkast och 
+kallas K&alpha;-str&aring;lning. K&beta;-str&aring;lning orsakas av 
+M&rarr;K &ouml;verg&aring;ngar. Kvantmekaniska urvalsreglar leder till 
+att endast 2<I>p</I>, 3<I>p</I>, osv till 1<I>s</I> kan ge upphov till 
+fotoner. </P> </TD></TR></TABLE>
+</P>
+
+<H4>Experiment</H4>
+<UL>
+    <LI>Best&auml;m med hj&auml;lp av Braggs lag v&aring;gl&auml;ngderna av K&alpha; and 
+    K&beta; av anodmaterialet. 
+    Planavst&aring;ndet i litiumfluorid &auml;r 2,014 &Aring; och f&ouml;r NaCl 2,820 &Aring;. 
+    Gl&ouml;m inte att ocks&aring; anv&auml;nda toppen i h&ouml;gre ordningar. 
+    Vilket grund&auml;mne &auml;r det? 
+    J&auml;mf&ouml;r med <A HREF="../Rontgen/X_rayEnergies.html">literaturv&auml;rden</A>.
+    <LI>K&ouml;r med  samma inst&auml;llngar fem kurvor till med sp&auml;nningar mellan 35 och 12 kV s&aring; att kurverna 
+hamnar i samma figur. Notera sp&auml;nningen vid kurvorna. Observera att gr&auml;nsen f&ouml;r signalen flyttar till st&ouml;rre 
+vinklar (l&auml;ngre v&aring;gl&auml;ngder) ju l&auml;gre anodsp&auml;nningen 
+blir (Duane-Hunt gr&auml;nsv&auml;rdet). Vid vilken anodsp&auml;nning f&ouml;rsvinner de karakteristiska linjerna?  
+    <LI>Avv&auml;nd dessa fem spektra f&ouml;r att best&auml;mma Plancks konstant i eV.&Aring; med linj&auml;r regression.
+    Anv&auml;nd &auml;ven uppskattning av standardavvikelsen f&auml;r att j&auml;mf&ouml;ra med  
+    <A HREF="http://physics.nist.gov/cgi-bin/cuu/Value?hbcmevf">literaturv&auml;rden</A>.    
+	<LI>Ers&auml;tt nu kristallen med ett annat kristall. Ta ett rent sk&auml;rm p&aring; datorn. K&ouml;r p&aring; 35 kV. 
+	<LI>Studera r&ouml;ntgenabsorption av pulverprov.
+	<LI>Studera r&ouml;ntgenfluorescensspektra.
+</UL>    
+
+<H4>Instuderingsuppgifter R&ouml;ntgen</H4>
+
+<P>Se t ex J&ouml;nsson kap. 4 och kap. 12.</P>
+<UL>
+    <LI>Ange ungef&auml;rligt v&aring;gl&auml;ngds- och fotonenergiomr&aring;de f&ouml;r r&ouml;ntgenstr&aring;lning.
+    <LI>Vad &auml;r det f&ouml;r likheter och olikheter mellan r&ouml;ntgen- och gammastr&aring;lning?
+    <LI>R&ouml;ntgenstr&aring;lning kan uppst&aring; p&aring; tv&aring; olika s&auml;tt. Redog&ouml;r f&ouml;r dessa.
+    <LI>Rita upp ett typiskt elektronexciterat r&ouml;ntgenspektrum. Ge namn &aring;t de olika delarna.
+    <LI>Vad menas med gr&auml;nsv&aring;gl&auml;ngden? Ge en kortfattad f&ouml;rklaring till begreppet.
+    <LI>Formulera och h&auml;rled Braggs relation.
+    <LI>Rita upp ett energiniv&aring;diagram och inf&ouml;r beteckningar f&ouml;r de olika r&ouml;ntgen&ouml;verg&aring;ngarna.
+    <LI>Enligt Moseley g&auml;ller att K&alpha;-v&aring;gl&auml;ngden fr&aring;n olika grund&auml;mnen f&ouml;ljer relationen 1/&lambda; = <I>a</I>(<I>Z-d</I>)&sup2;, d&auml;r <I>Z</I> &auml;r grund&auml;mnets atomnummer. Motivera varf&ouml;r <I>d</I> &asymp; 1.
+</UL>    
+    
+
+
+<H4>Bakgrundsmaterial</H4>
+<UL>
+    <LI>Leybolds pdf-filer:<UL><LI><A HREF="http://www.leybold-didactic.de/ga/5/554/554811/554811e.pdf">apparatens bruksanvisning</A> (2,6 Mb)   
+    <LI><A HREF="http://www.leybold-didactic.de/ga/5/554/55482/55482e.pdf">R&ouml;ntgenr&ouml;ret (Mo)</A>, <A HREF="http://www.leybold-didactic.de/ga/5/554/55485/55485e.pdf">Cu-anod</A>, <A HREF="http://www.leybold-didactic.de/ga/5/554/55483/55483e.pdf">Goniometer</A>, <A HREF="http://www.leybold-didactic.de/ga/5/559/55901/55901e.pdf">GM-r&ouml;r</A>
+    <LI><A HREF="http://www.leybold-didactic.de/ga/5/554/554832/554832e.pdf">Absorptionsfilter</A>, <A HREF="http://www.leybold-didactic.de/ga/5/554/554833/554833e.pdf">Ni-filter</A>, <A HREF="http://www.leybold-didactic.de/ga/5/554/554834/554834e.pdf">Absorptions-sats</A>, <A HREF="http://www.leybold-didactic.de/ga/5/554/554838/554838e.pdf">Filmh&aring;llare</A>
+    <LI><A HREF="http://www.leybold-didactic.de/ga/5/554/554836/554836e.pdf">Comptonspridning</A>,  <A HREF="http://www.leybold-didactic.de/ga/5/554/554840/554840e.pdf">M&auml;tning av luftjonisation</A>, <A HREF="http://www.leybold-didactic.de/ga/5/554/55487/55487e.pdf">Laue-diffraktion</A>
+    <LI><A HREF="http://www.ld-didactic.de/index.php?id=84&L=2">Mjukvara</A>, ladda ner "R&ouml;ntgenger&auml;t V1.25" (xrsetup.exe).
+</UL>
+<LI>F&ouml;rr anv&auml;nde vi en annan apparat: <A HREF="rontgen_labb.html">gammal labb-instruktion</A>
+
+<LI> "The development of x-ray analysis" av Sir Lawrence Bragg (Dover 
+paperback 1975)
+<lI>Braggdiffraktion-applet p&aring; http://www.eserc.stonybrook.edu/ProjectJava/Bragg/ (avl&auml;nkad pga Java problem)
+<LI><A HREF="http://w3.msi.vxu.se/users/pku/1FY805/Laue.html">f&ouml;rklaring av Laue-diffraktion</A> 
+
+</UL>
