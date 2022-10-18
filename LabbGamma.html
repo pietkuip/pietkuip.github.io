@@ -1,0 +1,249 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8" />
+<TITLE>Labb gammaspektroskopi</TITLE>
+<link type="text/css" rel="stylesheet" href="../style.css"> 
+</HEAD>
+<BODY>
+
+<H1>Labb gammaspektroskopi</H1>
+
+<H2>Förberedelseuppgift</H2>
+
+<P>Gamma-fotoner kan förlora energi i inelastiska kollisioner med (nästan)
+fria elektroner. Betrakta fotoner med en energi på 662 keV. Gör en graf av
+elektronernas kinetiska energi efter kollisionen som funktion av
+spridningsvinkel (0 < &theta; < 180&deg;). Rita i samma figur en graf av
+fotonens energi efter kollisionen. Bifog en skiss som klart visar vad
+spridningsvinkeln är.</P>
+
+<H2>Mätinstrument</H2>
+<P>Vi har två typer av detektorer för gammaspektroskopi:
+<UL>
+    <LI> 4 stycken NaI(Tl) scintillationsdetektorer med olika blyskärmar
+    <LI> en CdTe diod-detector.
+</UL>
+<P>Båda typer ger en elektrisk puls när en gammafoton detekteras. Till skillnad med t ex ett
+GM-rör anger i dessa instrument pulsens höjd hur stor den detekterade energin är. Det finns 
+olika sätt att sortera dessa pulser i stapeldiagram för att generera energispektrum. 
+Vi har följande gränssnitt:</P>
+<UL>
+	<LI>Genom ljudingången med analys i mjukvara
+	<LI>Osprey av Canberra
+	<LI>GammaData
+	<LI>PocketMCA av Amptek
+</UL>	
+</P>
+
+
+<H3>Scintillationsdetektor</H3>
+<P>
+Scintillationsdetektorerna S-1212-I av Teledyne innehåller som scintillator en 
+3&Prime;x3&Prime; kristall av natriumjodid. 
+På grund av jods stora atomnummer absorberar NaI gammastrålning effektivt. 
+Absorption ger uppgov till snabba Compton- och fotoelektroner, 
+vars energi snabbt minskar genom excitation i materialet. 
+Det uppstår elektron-hål-par, som kan rekombinera vid 
+dopningcentra (tallium) under utsändning av ljus. 
+Saltet är transparant, och ett mörkeradapterat öga skulle 
+kunna se små blixter (scintillationer) i
+materialet.</P> 
+
+<P>Det totala antalet synliga fotoner (blixtens ljusstyrka) är ungefär proportionellt mot 
+gamma-fotonens energi. Ljusstyrkan mäts genom fotoemission i ett vakuumrör där antalet 
+elektroner multipliceras, Detta är en PMT, 
+<A HREF="http://micro.magnet.fsu.edu/primer/digitalimaging/concepts/photomultipliers.html">photomultiplier tube</A>.  
+</P>
+
+<CENTER><IMG SRC="PMT.gif"></CENTER>
+
+<P>För varje gammakvant ger detektorn en elektrisk puls vars höjd 
+är proportionell mot gammafotonens energi. Pulserna sorteras på 
+höjd av olika kombinationer av analog och digital elektronik. 
+På datorn kan man då se en graf av gammafotonernas 
+energifördelning.</P>
+
+<P>
+<TABLE><TR><TD><IMG SRC="Comptonkant.gif"></TD>
+<TD><P>Även om kärnans gammastrålning är monokromatisk, 
+blir det en fördelning i instrumentet. Fototoppen produceras när 
+gammakvantens energi helt omvandlas till en elektrons kinetiska energi genom 
+fotoelektrisk effekt. Det blir en viss bredd i fördelningen 
+(i scintillationsdetektorer typ 5 eller 10 %) på grund av att en slumpvis 
+del av fotonerna detekteras av fotomultiplikatorröret.</P>
+
+<P>Men en del av gammafotonerna sprids genom comptonspridning. 
+Om gammakvanten sedan lämnar detektorkristallen, 
+mäter detektorn en lägre energi. Det ger upphov till ett 
+comptonkontinuum av elektronenergier. Elektronen får maximal energi 
+när gammakvanten sprids genom 180&deg;. I spektrum ger det upphov till 
+comptonkanten.</P>
+</TD></TR></TABLE></P>
+
+<P>Ofta (även hos oss) står detektorn i en blyskärmning. 
+Det finns gammafotoner som fotoexciterar bly 1<I>s</I>-elektroner.  
+Röntgenfluorescens ger då upphov till en Pb K&alpha; topp i detektorn.
+Gammakvanter kan också comptonspridas av omgivningen, och de som kommer 
+tillbaka till detektorn har spridits genom ungefär 180&deg; och ger upphov 
+till en <I>backscattering peak</I>.</P>
+
+<H3>CdTe diod-detektor</H3>
+
+<P>Det finns andra typer av gammaspektrometrar. 
+Vi har också en <A HREF="http://www.amptek.com/xr100cdt.html">CdTe-detektor</A> 
+med <A HREF="http://www.amptek.com/cdte_6.png">upplösning på 1%</A>. 
+Detektionsprincipen liknar den av ytbarriärdetektorn - alla elektron-hålpar 
+mäts helt elektroniskt. Nackdelen är att känsligheten är mycket
+lägre på grund av kadmiumtelluriddiodens lilla volym. Vid
+<A HREF="http://www.amptek.com/cdte_8.png">energier över 100 keV</A> 
+blir chansen att fotoner går rakt igenom allt större.</P> 
+
+<P>Riktigt bra upplösning och känslighet har kväve-kylda germaniumdetektorer.</P>
+
+<H4>Energi-kalibrering</H4>
+<P>Hur höga pulserna är beror inte bara på gamma-energin utan även på förstärkningsfaktorn. 
+För fotomultiplikatorröret är den en funktion av högspänningen på dynoderna. 
+I den här laborationen ska mätsystemet ha ett fönster för gamma-energier som 
+går upp till ungefär 3 MeV. Med Cs-137 kan man kolla om dess fototopp 
+ligger mellan kanal 220 och 250. Om inte ska högspänningen justeras. För detaljer, se 
+separata instruktioner.</P>
+
+<P>Den radioaktiva källan som används för kalibrering är 
+<A HREF="http://nucleardata.nuclear.lu.se/toi/nuclide.asp?iZA=630152">
+<sup>152</sup>Eu</A> som har ett komplicerat sönderfallsschema. 
+Spektrumet har fototoppar vid 122, 245, 344, 779, 964, 1086+1112 och 1408 keV.
+(Jämför <A HREF="http://homepage.lnu.se/staff/pkumsi/FyA704/152_Europium.png">Eu-152 
+spektrum tagen med CdTe-detektor</A>.)</P>
+
+<P>CdTe-detektorn kom med mjukvara som tillåter kalibrering med fler än två toppar.</P>
+
+<P>Efter energikalibrering kan man nu göra ett <B>urval</B> ur 
+följande experiment. 
+Ta åtminstone experimenten radondöttrar och comptonspridning.</P>
+
+<H4>Gammakällor</H4>
+
+<P><TABLE><TR><TD>
+<A HREF="http://www.spectrumtechniques.com/">
+<IMG SRC="http://homepage.lnu.se/staff/pkumsi/FyA704/gammasources.jpg"></A></TD>
+<TD><P>Ta nu spektra av några radioaktiva preparat. Bestäm fototopparnas centroider i MeV, 
+och jämför med litteraturvärden. Bestäm var radioaktiviteten i den "okända" källan kommar
+ifrån.</P>
+<P><A HREF="http://nucleardata.nuclear.lu.se/toi/nuclide.asp?iZA=110022">Na-22</A> 
+är en positronemitter, och förutom kärnövergången vid 1,275 MeV
+ser man 511-keV-fotoner från positronernas annihilering. 
+Varför ser man inte en topp vid summan av 1,275 MeV och 0,511 MeV men ingen topp vid 
+1,022 MeV för båda fotoner från par-annihilering? </P>
+</TD></TABLE></P>
+
+<H4>Comptonspridning</H4>
+
+<UL>
+    <LI>Mät ett spektrum av Cs-137 och bestäm comptonkantens energi. 
+    Jämför med teori (förberedelseuppgiften).
+    <LI>Verifiera backscattertoppens ursprung genom att jämföra cesiumspektrum
+    med och utan lock (som kan vara bly, trä, en bok, eller vad som helst med elektroner i).
+    Det kräver subtraktion av olika spektrum.
+    <LI>Jämför summan av denna energi och comptonkantens energi med 
+    fototoppens energi. Varför är det så?
+    <LI>Mät comptonspridning genom 90&deg;. 
+    Använd en cesiumkälla med en aktivitet på 370 kBq. 
+    Som spridare kan man använda plast, aluminium, vatten (men spill inte!). 
+    Försök eventuellt spridning genom några fler vinklar.
+    Beskriv experimentets geometri. Hur får man bra vinkelupplösning?
+    <LI>Rita alla dina experimentella punkter in i förberedelseuppgiftens 
+    figur.
+    <LI>I princip kan man använda en annan detektor som spridare. 
+    Den andra detektorn mäter då comptonelektronens energi, 
+    vars vinkelberoende man kan mäta med hjälp av koincidenser 
+    mellan båda fotomultiplikatorsignalerna.  
+</UL>
+
+<H4>Kalium-40</H4>
+<P>B&aring;da <sup>39</sup>K (93 %) och <sup>41</sup>K (7 %) &auml;r stabila med j&auml;mna
+antal neutroner, men
+<A HREF="http://nucleardata.nuclear.lu.se/toi/nuclide.asp?iZA=190040"><sup>40</sup>K</A>  
+(0,0117 %) är inte helt stabilt. Vid 11 % av alla
+sönderfall fångar kärnan in en elektron från K-skalet, och förvandlas
+därmed till ett exciterat tillstånd av Ar-40, som relaxerar genom
+gamma-emission.</P>
+<CENTER><P><IMG SRC="http://homepage.lnu.se/staff/pkumsi/FyA704/K40ds.gif"></P></CENTER>
+<P>Man kan mäta gammastrålning från konstgödsel, Seltin, havssalt, stenar,
+osv.</P> 
+
+<H4>Radondöttrar</H4>
+
+<P>En tunn metalltråd är uppspänd mellan två isolatorer. Tråden är några meter lång. 
+På tråden ligger en högspänning på 5-10 kV med minus polaritet. Uppställningen står i 
+minst en halv timme i oventilerat rum. 
+Stäng av spänningen, jorda tråden. Torka av den noga, runt om och längs hela längden med 
+en pappersservett.</P>
+
+<P>Eller använd suglåda (av Alega). Anslut den på en dammsugare, lägg filtrerpapper på 
+öppningarna, och låt dammsugaren gå i en halv timme. Under tiden kan man mäta ett 
+bakgrundsspektrum. 
+
+<P>För att mäta aktiviteten som funktion av tid finns MCS-mod 
+(<I>multi-channel scaling</I>).</P>
+
+<P>Lägg pappret med radondöttrarna så snabbt som möjligt efter insamlingen på 
+scintillatordetektorn. Mät radioaktiviteten i en serie av spektra.</P>
+
+<P>Analysera. Subtrahera bakgrunden från mätserien. 
+Mät topparnas areor och plotta dem som funktion av tid. Försök bestämma halveringstiderna. 
+Vilka nuklider ser du? 
+</P>
+
+<H4>Radium, uran, torium</H4>
+
+<P>Kemiskt isolerade grundämnen kan ha komplicerade spektrum.
+De innehåller fortfarande olika isotoper, och den mest sällsynta isotopen 
+kan ha högst aktivitet (t ex U-234). Dessutom finns det gammastrålning från
+sönderfallsprodukter. Försök ge beteckningar åt de synliga topparna, och
+redogör för dina resonemang. Det finns provar av radium
+(<A HREF="http://homepage.lnu.se/staff/pkumsi/FyC701/armbandsur.html">i en klocka</A>), 
+torium i en gasstrumpa och uran (i vaselinglas eller som uranylnitrat).
+
+<H4>Stenar</H4>
+
+<P>Spektra fr&aring;n uranmalm osv inneh&aring;ller &auml;nnu fler toppar, eftersom alla
+uranisotoper &auml;r i j&auml;mnvikt med sina hela s&ouml;nderfallsserier.
+<UL>
+<LI><A HREF="http://homepage.lnu.se/staff/pkumsi/FyA704/Uranium_series.html">Uranserien</A>
+<LI><A HREF="http://homepage.lnu.se/staff/pkumsi/FyA704/Thorium_series.html">Toriumserien</A>       
+<LI><A HREF="http://homepage.lnu.se/staff/pkumsi/FyA704/Actinium_series.html">Actiniumserien</A>
+</UL></P>
+<P>Man kan titta på alunskiffer mm (blåbetong, rödfyr?). 
+Försök identifiera de starkaste gammatopparna.
+</P>
+
+<H4>Effektivitetskalibrering av detektorn</H4>
+
+<P>Man använder europiumpreparat med känd aktivitet. Följ instruktionerna i
+manualen.</P>
+
+<P>Med en effektivitetskalibrering blir det möjligt att bestämma
+aktiviteten av okända prov: älgkött, ren och svamp (Tjernobyl), vatten,
+radonfilter, aska, stenar, blåbetong.</A>
+
+<H4>Referenser:</H4>
+
+<P>
+<UL>
+   <LI><A HREF="http://www.student.nada.kth.se/~f93-jhu/phys_sim/compton/Compton.htm">
+   Java-applet om Comptonspridning</A>; 
+   <A HREF="http://www.student.nada.kth.se/~f93-jhu/phys_sim/compton2/Compton.htm">
+   interactiv version</A>  
+   <LI><A HREF="http://ie.lbl.gov/radioactivedecay/">Distanslab om halveringstider</A>
+   <LI>INEEL's <A HREF="http://www.inl.gov/gammaray/catalogs/nai/catalog_nai.shtml">
+   periodisk-system-gr&auml;nssnitt till gammaspectra</A> (med s&ouml;nderfallsschema).
+   <LI>INEEL's bok <A HREF="http://www.inl.gov/gammaray/catalogs/pdf/naicat.pdf">
+   NaI(Tl) Gamma Spectrum Catalogue</A> (23,7 Mb)
+   <LI><A HREF="http://www.orau.org/ptp/collection/consumer%20products/consumer.htm">Radioaktiva konsumentprodukter</A>
+</UL>
+</P>
+
+
+
+</BODY>
+</HTML>
