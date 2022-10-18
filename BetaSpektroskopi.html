@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8" />
+<TITLE>Laboration beta-spektroskopi</TITLE>
+<link type="text/css" rel="stylesheet" href="style.css"> 
+</HEAD>
+<BODY>
+<H1>Beta-spektrum av Y-90</H1>
+<P>Laborationen går ut på att bestämma beta-spektrum av 
+<A  HREF="http://nucleardata.nuclear.lu.se/toi/nuclide.asp?iZA=390090">Yttrium-90</A> 
+med hjälp av en magnetisk spektrometer.
+En viktig del av laborationen är databehandlingen: mätintervallets inverkan på den experimentella 
+fördelningsfunktionen och statistiska fluktuationer i antalen detekterade partiklar.</P> 
+
+
+<H4>Två förberedelseuppgifter och fem instuderingsfrågor</H4>
+<UL>
+<LI>Källan är i själva verket ett <a href="http://nucleardata.nuclear.lu.se/toi/nuclide.asp?iZA=380090">Strontium-90</A>-preparat; 
+Y-90 skapas då Sr-90 sönderfaller. 
+Skriv ner de bägge sönderfallsformlerna och beräkna sönderfallsenergierna utifrån tabellerade atommassor.</LI>
+<LI>Beräkna hastigheten hos de energirikaste betapartiklarna i de båda sönderfallen.</LI>
+<LI>Hur fungerar ett GM-rör?</LI>
+<LI>Vad är ett betaspektrum? Hur ser ett betaspektrum ut?</LI>
+<LI>Förklara varför betapartikelns energi varierar vid betasönderfall. 
+Varför varierar inte alfapartikelns energi vid alfasönderfall?</LI>
+<LI>I denna laboration studerar vi ett  &beta;<sup>−</sup>-sönderfall. 
+Skulle vi med denna uppställning även kunna ha studerat &beta;<sup>+</sup>-sönderfall? 
+Hade vi behövt vidta några särskilda åtgärder?</LI>
+<LI>Ungefär hur mycket energi förlorar betapartiklarna då de ju går genom luft under sin färd från preparat till GM-rör?
+Hur kommer laborationens resultat att påverkas av detta?</LI>
+</UL>
+
+<H4>Magnetisk avlänkning</H4>
+<P>Beta-partiklarär elektroner, och de avlänkas av magnetfält på samma sätt som i <I>e/m</I>-experimentet.
+Skillnaden är att de kinetiska energierna är 10&thinsp;000 gånger större. Det innebär att deras kinetiska energi
+är större än vilomassan, partiklarna har relativistiska hastigheter.</P>
+
+<P>
+<TABLE>
+<TR><TD><IMG SRC="Beta_Frederiksen.jpg"></TD>
+<TD><P>Elektronernas bana definieras av ett kvartscirkelformat spår i en plexiglasplatta av Frederiksen,
+Ølgod, se bilden intill. Innerradien <i>r</i><sub>min</sub> år 28 mm och ytterradien <i>r</i><sub>max</sub> år 30 mm.  
+Vid spårets början kan &beta;-källan skruvas in. Vid spårets andra öppning placeras ett GM-rör.
+Plexiglasplattan hänger mellan polskorna av en elektromagnet. I plexiglaset finns plats för en Hallplatta 
+som mäter magnetfältet <i>B</i>.</P>
+<P>Centripetalkraften utgörs av Lorentzkraften enligt
+<center><i>e⋅v⋅B= mv&sup2;/r</i></center>
+<P>vilket ger att rörelsemängd <i>p = mv</i> är</P>
+<center><i>p = e⋅r⋅B</i>.</center>
+</TD>
+</TR>
+</TABLE>
+</P>
+<P>Sambandet gäller även om rörelsemängd är relativistisk
+<i>p = &gamma;m<sub>o</sub>v</i>.<br> 
+Med den relativistiska formeln för total energi <i>E&sup2; = p&sup2;c&sup2; + (m<sub>o</sub>c&sup2;)&sup2;</i> 
+får man följande uttryck för partikelns kinetiska energi:</P>
+<center><i>E</i><sub>k</sub> = &radic;<span style="text-decoration:overline;"><i>e</i>&sup2;<i>B</i>&sup2;<i>r</i>&sup2;<i>c</i>&sup2; + 
+<i>m</i><sub>o</sub>&sup2;<i>c</i><sup>4</sup></span> - <i>m</i><sub>o</sub><i>c&sup2;</i>.</center>
+<p>Det är lämpligast att räkna i enheter av MeV. Om <I>B</I> ges i tesla och <I>r</I> i centimeter blir uttrycket</P>
+<center><i>E</i><sub>k</sub> = &radic;<span style="text-decoration:overline;">(<i>B⋅r</i>⋅2,998)&sup2; + 0,511&sup2;</span> - 0,511</i> MeV.</center>
+
+<P>För en given fältstyrka kommer endast &beta;-partiklar inom ett visst energi-intervall att nå fram till detektorn. 
+Den undre och övre intervallgränsen bestäms av <i>r</i><sub>min</sub> och <i>r</i><sub>max</sub>.
+Genom att mäta antalet registrerade pulser per sekund i GM-röret för olika fältstyrkor kan vi bestämma 
+hur stor andel av betapartiklarna som har en viss energi, dvs ett betaspektrum.</P>
+
+<H4>Mätningar</H4>
+<P>Bestäm rätt riktning för magnetfältet.
+Ta en mätserie med ungefär tio olika fältstyrkor mellan noll och &approx;400 mT. En lämplig mättid
+kan vara 100 sekunder. Den relativa mätosäkerheten är omvänt proportionell mot mättiden - 
+längre är bättre, men en timme är bara dubbelt så bra som en kvart.</P>
+
+<P>Observera den maximalt tillåtna strömmen genom spolarna. Känn också efter med handen på spolarna, 
+att de inte blir för varma...</P>
+
+<P>GM-röret är inte bara känslig för &beta;-partiklar utan även för gamma-strålning. Strontium-källan 
+ger därför en bakgrundintensitet som inte beror på magnetfält. Man kan mäta bakgrunden och subtrahera den. 
+Här finns dock ett problem att bakgrunden ökar den statistiska osäkerheten.
+Om man mäter <I>N</I> pulser i en viss tid, är skattningen av standardavvikelsen &sigma; = &radic;N. 
+Oavsett om man adderar eller subtraherar två mätningar är skattningen av osäkerheten 
+&sigma; = &radic;<span style="text-decoration:overline;">&sigma;<sub>a</sub>&sup2; + &sigma;<sub>b</sub>&sup2;</span>.</P> 
+
+<P>Mät därför bakgrunden utan magnetfält med Sr-preparatet på plats under en längre tid, 
+så att åtminstone 200 pulser registreras.
+Man kan göra det med fördel under lång tid, till exempel under en fikapaus.</I>
+
+<h4>Bearbetning</h4>
+<P>Det man är intresserad av är mängden pulser per energiinterval, &Delta;<i>N</i>/&Delta;<i>E</i> eller 
+d<i>N</i>/d<i>E</i>. Men i vårt experiment blir energiintervallet större vid högre energier. 
+De obearbetade värden underskattar alltså spektralintensiteten vid lägre energier. 
+Beräkningen måste korrigera för det.</P>
+<P>Grafen ska också visa standardfelen i spektrum. Räkna ut standardavvikelse och lägg dem i en ny 
+kolumn som kan heta sigma. I Logger Pro kan man under "Column Options" för y-punkterna hitta en check-box 
+för "Error bar calculations". Välj "Use column". Se hur bra mätningar stämmer med beräknade beta-spektrum.</P>
+
+
+<H4>Länkar</H4>
+<UL>
+<LI><A HREF="http://www.frederiksen.eu/uploads/tx_tcshop/media/516500_AA.pdf">Handledning betaspektroskopi</A> 
+av Frederiksen, Ølgod (på danska)</LI>
+<LI><A HREF="WebBetaSpectroscopy.html">Distanslabb betaspektroskopi</A>
+</UL>
+
+</BODY>
+</HTML>
+
