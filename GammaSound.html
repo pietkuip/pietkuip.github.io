@@ -1,0 +1,277 @@
+<HTML>
+<HEAD>
+<TITLE>Labb gammaspektroskopi</TITLE>
+<meta charset="utf-8" />
+<link type="text/css" rel="stylesheet" href="../style.css">
+</HEAD>
+
+<BODY>
+<H1>Labb gammaspektroskopi</H1>
+<H2>Förberedelseuppgift</H2>
+<P>Gamma-fotoner kan förlora energi i inelastiska kollisioner med (nästan) fria
+elektroner. Betrakta fotoner med en energi på 662 keV. Gör en graf av
+elektronernas kinetiska energi efter kollisionen som funktion av
+spridningsvinkel (0 < &theta; < 180&deg;). Rita i samma figur en graf av
+fotonens energi efter kollisionen. Bifog en skiss som klart visar vad
+spridningsvinkeln är.</P>
+
+<H2>Mätinstrument</H2>
+<P>Vi har två typer av detektorer för gammastrålning:
+<UL>
+<LI> 4 stycken NaI(Tl) scintillationsdetektorer, två GDM20-blytunnor för skärmning
+<LI> en plastscintillationsdetektor
+<LI> en CdTe diod-detector.
+</UL></P>
+<P>Ljudingången på datorn används för att digitalisera signalerna.
+</P>
+
+<H3>Scintillatorerna</H3>
+<P>Mätinstrument är scintillationsdetektorn S-1212-I av Teledyne.
+Scintillatormaterialet är en 3&Prime;x3&Prime; kristall av natriumjodid.
+På grund av jods stora atomnummer absorberar NaI gammastrålning
+effektivt. Absorption ger uppgov till snabba Compton- och fotoelektroner,
+vars energi snabbt minskar genom excitation i materialet.
+Det uppstår elektron-hål-par, som kan rekombinera vid
+dopningcentra (tallium) under utsändning av ljus.
+Saltet är transparent, och ett mörkeradapterat öga skulle
+kunna se små blixter (scintillationer) i
+materialet.</TD></TR></TABLE></P>
+
+<P>Det totala antalet synliga fotoner (blixtens ljusstyrka) är ungefär proportionellt 
+mot mängden energi av gammafotonen som absorberas i NaI-kristallen. Ljusstyrkan mäts med PMT, 
+<A HREF="http://micro.magnet.fsu.edu/primer/digitalimaging/concepts/photomultipliers.html">photomultiplier tube</A>.  </P>
+
+<CENTER><IMG SRC="PMT.gif"></CENTER>
+
+<P>För varje gammakvant ger detektorn alltså en puls vars höjd
+är proportionell mot gammafotonens energi. Pulserna digitaliseras av ljudingången och
+sorteras på höjd med hjälp av ett datorprogram.
+Programmet visar sedan en graf av gammafotonernas
+energifördelning.</P>
+
+<P>
+<TABLE><TR><TD><IMG SRC="Comptonkant.gif"></TD>
+<TD><P>Även om kärnans gammastrålning är monokromatiskt,
+blir det en fördelning i instrumentet. Fototoppen produceras när
+gammakvantens energi helt omvandlas till en elektrons kinetiska energi genom
+fotoelektrisk effekt. Det blir en viss bredd i fördelningen
+(i scintillationsdetektorer typ 5 eller 10 %) på grund av att en slumpvis
+del av fotonerna detekteras av fotomultiplikatorröret.</P>
+
+<P>Men en del av gammafotonerna sprids genom comptonspridning.
+Om gammakvanten sedan lämnar detektorkristallen,
+mäter detektorn en lägre energi. Det ger upphov till ett
+comptonkontinuum av elektronenergier. Elektronen får maximal energi
+när gammakvanten sprids genom 180&deg;. I spektrum ger det upphov till
+comptonkanten.</P>
+</TD></TR></TABLE></P>
+
+
+<P>Ofta är detektorn skärmad med bly, hos oss är det för att kunna mäta svagt 
+radioaktiva prov utan störning från rummets bakgrundstrålning.
+Det finns gammafotoner från provet som fotoexciterar bly 1<I>s</I>-elektroner.
+Röntgenfluorescens ger då upphov till en Pb K&alpha; topp i detektorn.
+Gammakvanter kan ocks&aring; comptonspridas av omgivningen, och de som kommer
+tillbaka till detektorn har spridits genom ungefär 180&deg; och ger upphov
+till en <I>backscattering peak</I>.</P>
+
+<H4>CdTe diod-detektor</H4>
+<P>Det finns andra typer av gammaspektrometrar.
+Vi har också en <A HREF="https://www.amptek.com/products/cdte-x-ray-and-gamma-ray-detectors/xr-100cdte-x-ray-and-gamma-ray-detector">CdTe-detektor</A>
+med <A HREF="https://www.amptek.com/-/media/ametekamptek/images/products/cdte_6.png">upplösning på 1%</A>.
+Detektionsprincipen liknar den av ytbarriärdetektorn - alla elektron-hålpar
+mäts helt elektroniskt. Nackdelen är att känsligheten är mycket
+lägre på grund av kadmiumtelluriddiodens lilla volym. Vid
+<A HREF="https://www.amptek.com/internal-products/xr-100t-cdte-cadmium-telluride-detector-efficiency-application-note">energier över 100 keV</A>
+blir chansen att fotoner går rakt igenom allt större.</P>
+
+<P>Riktigt bra upplösning och känslighet har
+kväve-kylda germaniumdetektorer. Dessa är dock mycket dyrare.</P>
+
+<H3>Digitalisering med ljudingång</H3>
+
+<H4>Programmet PRA (Pulse Recorder & Analyzer)</H4>
+<P>PRA är ett av programmen som använder datorns ljudingång för att digitalisera pulser. 
+Därför måste man först förlänga pulserna från 
+PMT-röret. I vårt fall sker det i GS-PRO modulen.</P>
+
+<P>PRA.exe är ett Windows program. Vi kör det på en Mac under emulatorn Crossover. 
+Nuvarande installerade version är 24.0.0.2. Förmodligen är det redan igång. 
+Klicka annars på PRA.exe i mappen Win32 och programmet ska starta.</P>
+
+<P>För att se signalen kan man under <I><U>V</U>iew</I> öppna <I>Audio input</I>. 
+Där syns inget om 
+inte datainsamlingen är igång, så starta acquisition under <I><U>A</U>ction</I>-menyn. 
+Antalet pulser ska inte vara så högt att de ligger för nära varandra.</P>
+
+<H4>Uppställningar</H4>
+
+<P>Det finns två uppställningar med detektorer i GDM20-blyskärmar. Härmed går det att 
+mäta svagt radioaktiva prov eftersom blyet absorberar strålning från byggnadsmaterial osv.
+För dessa ska programmet redan ha lärt sig pulsformen.
+Kalibreringen ska redan ha gjorts och det ska redan finnas ett baksgrundsspektrum.
+Därmed är allt färdigt för att samla in energispektrum i fönstret Pulse Height histogram.</P>
+
+<P>Sedan finns det en mätdator som ska vara riggad för demonstrationer med 
+koincidens. Man kan bygga ett "blyslott" med de tunga elementen men skärmning behöver inte 
+vara lika bra där. Koincidens beror nämligen på att datorn detekterar 
+två händelser samtidigt och sannolikheten att man räknar slumpvisa fotoner från väggen
+är då mycket mindre.</P>
+
+
+<H3>Experiment</H3>
+
+<P>Öppna fönstren "Counting Rate vs Time" och "Pulse Height Histogram", flytta runt dem, 
+justera storleken, start en ny mätning med "Start Data Acquisition" under 
+<U>A</U>ction-menyn. Se vad som händer när man öppnar det tunga locket av GDM20 eller när 
+man tar fram en radioaktiv källa.
+
+<P>Man kan man nu göra ett <B>urval</B> ur följande experiment. Förutom de vanliga 
+gammakällorna ska man 
+göra åtminstone ett av experimenten med sönderfallstid (radondöttrar eller Cs-137).
+Gärna även ett 
+av experimenten med koincidens (comptonspridning eller positronannihilering).</P>
+
+
+<H4>Gammakällor</H4>
+<P><TABLE><TR><TD>
+
+<A HREF="http://www.spectrumtechniques.com/">
+<IMG SRC="gammasources.jpg"></A></TD>
+
+<TD><P>Ta nu spektra av några radioaktiva preparat. Bestäm fototopparnas energier
+och jämför med litteraturvärden. Bestäm var radioaktiviteten i den "okända" källan kommer
+ifrån.</P>
+
+<P><A HREF="http://nucleardata.nuclear.lu.se/toi/nuclide.asp?iZA=110022">Na-22</A>
+är en positronemitter, och förutom kärnövergången vid 1,275 MeV
+ser man 511-keV-fotoner från positronernas annihilering.
+Varför ser man en topp vid summan av 1,275 MeV och 0,511 MeV men ingen topp vid
+1,022 MeV för båda fotoner från par-annihilering? </P>
+</TD></TABLE></P>
+
+
+<H4>Kalium-40</H4>
+
+<P>Båda <sup>39</sup>K (93 %) och <sup>41</sup>K (7 %) är stabila med jämna antal neutroner, 
+men
+<A HREF="http://nucleardata.nuclear.lu.se/toi/nuclide.asp?iZA=190040"><sup>40</sup>K</A>
+(0,0117 %) är inte helt stabilt. Vid 11 % av alla sönderfall infångar kärnan en elektron 
+från K-skalet, och förvandlas därmed till ett exciterat tillstånd av Ar-40, som relaxerar 
+genom gamma-emission.</P>
+
+<CENTER><P><IMG SRC="K40ds.gif"></P></CENTER>
+
+<P>Man kan mäta gammastrålning från konstgödsel, Seltin, havssalt, stenar, osv.</P>
+
+<h4>Isotopgenerator, halveringstid av <sup>137m</sup>Ba</h4>
+<P>Våra vanliga gammakällor (till exempel den som vi gjorde i introduktionslaborationen för programmet) är
+märkta med <a href="http://nucleardata.nuclear.lu.se/toi/nuclide.asp?iZA=550137">Cs-137</a> 
+som har en halveringstid på 30 år. Men egentligen är Cs-137 en ren betakälla. Det är sedan
+exciterade bariumkärnor som ger gammastrålning. Och den tar lite tid på sig: bariumkärnan är 
+metastabil <a href="http://nucleardata.nuclear.lu.se/toi/nuclide.asp?iZA=560437">Ba-137m</a>
+med en halveringstid på några minuter. </p>
+
+<P>Man har alltså tid att kemiskt isolera dotterkärnan. Det gör vi med en saltsyralösning 
+och vätskan på en aluminium planchet. Redan en droppe kan ge för många pulser för 
+ljudpuls-mjukvaran, så ställ planchetten på en hållare lite ovanför detektorn. 
+Eller stäng av "<I>Use shape method</I>" eftersom mätning på endast tröskel är snabbare 
+och inte kastar bort pulser ligger för nära varandra i tid.</P>
+
+<p>Observera att gamma-spektrumet är identisk med det av "Cs-137".</p>
+
+<P>Mät pulshöjdshistogram och countrate vs time. Ställ in tid per bin på t ex 15 eller 
+30 sekunder och se hur intensiteten avklingar som funktion av tid. (Ta en kopp kaffe.) 
+Uppskatta halveringstid. Se även hur det ser ut med logaritmisk skala.</p>
+
+
+<H4>Radondöttrar</H4>
+
+<P>En tunn metalltråd är uppspänd mellan två isolatorer. Tråden är några meter lång. 
+På tråden ligger en högspänning på 5-10 kV, med minus på tråden. 
+Uppställningen står i minst en halv timme i oventilerat rum.
+Stäng av spänningen, jorda tråden. Torka av den noga, runt om och längs hela, med ett
+hopvikt filtrerpapper.</P>
+
+<P>Eller använd Alega's suglåda. Anslut den på en dammsugare, lägg filtrerpapper på 
+öppningarna, och låt dammsugaren gå i en halv timme.</P>
+
+<P>Lägg pappret med radondöttrarna snabbt som efter insamlingen på scintillatordetektorn. 
+Mät aktiviteten som funktion av tid. Man kan också mäta radioaktiviteten i en serie av spektrum.</P>
+
+<P>Analysera. Vilka nuklider ser du?</P>
+
+
+<H4>Radium, uran, torium</H4>
+<P>Kemiskt isolerade grundänen kan ha komplicerade spektrum.
+De innehåller fortfarande olika isotoper, och den mest sällsynta isotopen
+kan ha högst aktivitet (t ex U-234). Dessutom finns det gammastrålning från
+sönderfallsprodukter. Försök ge beteckningar åt de synliga topparna, och
+redogör för dina resonemang. Det finns provar av radium
+(<A HREF="../FyC701/armbandsur.html">i en klocka</A>), torium i en gasstrumpa
+och uran (i vaselinglas eller som uranylnitrat).
+
+<H4>Stenar</H4>
+
+<P>Spektra från uranmalm osv innehåller ännu fler toppar, eftersom alla
+uranisotoper är i jämnvikt med hela sönderfallsserien.
+<UL>
+<LI><A HREF="../FyA704/Uranium_series.html">Uranserien</A>
+<LI><A HREF="../FyA704/Thorium_series.html">Toriumserien</A>
+<LI>Actiniumserien
+</UL></P>
+
+<P>Man kan titta på alunskiffer, blåbetong, rödfyr mm.
+Försök identifiera de starkaste gammatopparna.
+</P>
+
+<H4>Comptonspridning</H4>
+<UL>
+<LI>M&auml;t ett spektrum av Cs-137 och best&auml;m comptonkantens energi.
+J&auml;mf&ouml;r med teori.
+<LI>Verifiera backscattertoppens ursprung genom att j&auml;mf&ouml;ra cesiumspektrum
+med och utan lock (som kan vara bly, tr&auml;, en bok, eller vad som helst med elektroner i).
+</ul>
+<P>Eventuellt:
+<UL>
+<LI>M&auml;t comptonspridning genom 90&deg;.
+Anv&auml;nd en cesiumk&auml;lla med en aktivitet p&aring; 370 kBq.
+Som spridare kan man anv&auml;nda plast, aluminium, vatten (men spill inte!).
+F&ouml;rs&ouml;k eventuellt spridning genom n&aring;gra fler vinklar.
+Beskriv experimentets geometri. Hur f&aring;r man bra vinkeloppl&ouml;sning?
+<LI>Rita alla dina experimentella punkter in i f&ouml;rberedelseuppgiftens
+figur.
+<LI>I princip kan man anv&auml;nda en annan detektor som spridare.
+Den andra detektorn m&auml;ter d&aring; comptonelektronens energi,
+vars vinkelberoende man kan m&auml;ta med hj&auml;lp av en koincidenskrets
+mellan b&aring;da fotomultiplikatorsignalerna.
+</UL>
+</P>
+
+<H4>Effektivitetskalibrering av detektorn</H4>
+<P>Med en effektivitetskalibrering blir det möjligt att bestämma
+aktiviteten av okända prov kvantitativt: älgkött, ren och svamp (Tjernobyl), vatten,
+radonfilter, aska, stenar, blåbetong.</P>
+
+<H4>Referenser:</H4>
+<P>
+<UL>
+<li><a href="https://www.gammaspectacular.com">GammaSpectacular</a>, elektroniken som vi använder</li>
+<LI><a href="https://www.gammaspectacular.com/blue/software-downloads/pra-spectrometry-software">PRA</a>, gratis mjukvara (zip-arkivet innehåller också manualen)</li>
+<LI>INEEL's <A HREF="https://gammaray.inl.gov/SitePages/catalog_nai.aspx">
+periodisk-system-gränssnitt till gammaspectra</A> (med sönderfallsschema).
+<LI>INEEL's bok <A HREF="https://gammaray.inl.gov/">NaI(Tl) Gamma Spectrum Catalogue</A> (23,7 Mb)
+<LI><A HREF="http://www.orau.org/ptp/collection/consumer%20products/consumer.htm">Radioaktiva konsumentprodukter</A>
+</UL>
+
+</P>
+
+
+
+
+
+
+
+</BODY>
+
+</HTM>L
