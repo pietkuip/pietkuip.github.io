@@ -1,2 +1,4 @@
-# Home page of Pieter Kuiper
-I will move from [the LNU website](https://homepage.lnu.se//staff/pkumsi/). 
+# Home page
+Now that I have retired, I will move here some stuff from [the LNU website](https://homepage.lnu.se//staff/pkumsi/). 
+
+But I will first start a travel blog about my new career as a pet sitter.
